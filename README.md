@@ -1,8 +1,4 @@
-<p align="center">
-  <h1>Mobile-First Responsive Blog by applying the DRY Method technique</h1>
-</p>
-
-
+<h1 align="center">Mobile-First Responsive Blog by applying the DRY Method technique</h1>
 
 Creating a responsive, mobile-first website involves designing and developing a site that adapts seamlessly to different screen sizes, with a primary focus on mobile devices. To achieve this, one can employ modern CSS techniques like flexbox for layout and object-fit for image sizing. 
 
