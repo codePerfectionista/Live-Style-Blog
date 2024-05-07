@@ -1,0 +1,297 @@
+body {
+  margin: 0;
+  /* font-family: "Lora", serif; */
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.image-full{
+  max-height: 520px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 1em;
+}
+
+/**************************************************************
+  Typography
+  ***************************************************************/
+h1,
+h2,
+h3 {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  color: #143744;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+h3{
+  color: #1792d2;
+}
+
+/*the Logo h1 subtitle*/
+.subtitle {
+  font-weight: 700;
+  color: #1792d2;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+/**************************************************************
+  Layout
+***************************************************************/
+.container {
+  width: 90%;
+  max-width: 900px;
+  /* border: 1px solid magenta; */
+  margin: 0 auto;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  text-align: center; /*you don't want this to be centered */
+  background-color: #f8f8f8;
+  padding: 2em 0;
+  margin-bottom: 2em;
+}
+main {
+  width: 70%;
+}
+
+aside {
+  width: 25%;
+  min-width: 200px;
+  margin-left: 1em;
+}
+
+/**************************************************************
+  Designing full Project with Mobile First Method
+***************************************************************/
+
+/*Article Main Body */
+
+.article-title {
+  font-size: 1.5rem;
+}
+
+.article-read-more,
+.article-info {
+  font-size: 0.69rem;
+  
+}
+.article-read-more {
+  color: #1792d2;
+  font-size: 0.875rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.article-read-more:hover,
+.article-read-more:focus {
+  color: #143774;
+  text-decoration: underline;
+}
+
+a {
+  color: #1792d2;
+  text-decoration: underline;
+}
+a:hover,
+a:focus {
+  color: #143774;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/*Article to Switch the Styling side by side*/
+
+.article-featured {
+  border-bottom: 1px solid #707070;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+}
+.article-recent {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+}
+
+.article-recent-main {
+  order: 2;
+}
+.article-recent-secondary {
+  order: 1;
+}
+.widget-title {
+  font-size: 1.2rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+.widget-recent-post-title {
+  font-size: 1rem;
+}
+
+.widget-recent-post {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #707070;
+}
+
+.widget-image {
+  order: -1;
+}
+
+.widget-recent-post-title{
+  color:#143774;
+}
+/**************************************************************
+  Navigation
+  ***************************************************************/
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  /*It's really common to do this to get rid of the extra space */
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+nav li {
+  margin-left: 2em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #707070;
+  font-weight: 700;
+  padding: 0.25em 0;
+  /*always a good idea to add padding to give it an extra room.*/
+}
+
+nav a:hover,
+a:focus {
+  color: #1792d2;
+  
+}
+
+.current-page {
+
+  border-bottom: 1px solid #758d3e;
+}
+.current-page a:hover {
+  color: #1792d2;
+  border-bottom: 1px solid #707070;
+  /*hints that you're on current page*/
+}
+
+/**************************************************************
+  END OF Navigation
+***************************************************************/
+
+/**************************************************************
+  Media Query for smaller screen size up to 675px
+***************************************************************/
+@media (max-width: 675px) {
+  .container-flex {
+    flex-direction: column;
+  }
+  header {
+    text-align: center;
+  }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    flex-direction: column;
+  }
+  nav li {
+    margin: 0.5em 0;
+  }
+  main {
+    width: 75%;
+  }
+  aside {
+    width: 50%;
+  }
+}
+
+/**************************************************************
+  End of Media Query for Smaller Screen
+***************************************************************/
+
+/**************************************************************
+  Media Query Min-Width: 675px - Bigger Screen
+***************************************************************/
+@media (min-width: 675px) {
+  .article-recent {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .article-recent-main {
+    width: 68%;
+  }
+  .article-recent-secondary {
+    width: 30%;
+  }
+
+  .article-image {
+    width: 100%;
+    min-height: 230px;
+    object-fit: cover;
+  }
+  /*Last image Not Displaying fully-correct positioning*/
+  .position-left {
+    object-position: left;
+  }
+  /*Positioning for the Featured Article*/
+  .article-featured {
+    display: flex;
+    flex-direction: column;
+  }
+  .article-featured .article-image {
+    order: -2;
+  }
+  .article-featured .article-info {
+    order: -1;
+  }
+}
+
+/*Side Bar Widget Styling*/
+.intro {
+  border: 16px solid #cecccc;
+  margin-bottom: 0.8em;
+  padding: 1em;
+}
+.sidebar-container {
+  border: 16px solid #cecccc;
+  padding: 1em;
+}
+
+/**************************************************************
+  Footer
+***************************************************************/
+
+footer {
+  text-align: center; /*you don't want this to be centered */
+  background-color: #143774;
+  color: #fff;
+  padding: 2em 0;
+  margin: 1em 0.1em 0 0.1em;
+}
