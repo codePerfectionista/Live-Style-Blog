@@ -1,4 +1,4 @@
-
+#Mobile-First Responsive Blog by applying the DRY Method technique
 
 ![Live-Style-Blog](https://github.com/codePerfectionista/Live-Style-Blog/assets/26823180/b7feb6d0-3aa0-4b8c-9b27-7e3f21e9df25)
 
